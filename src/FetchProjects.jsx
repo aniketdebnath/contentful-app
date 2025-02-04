@@ -1,9 +1,10 @@
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
+
 const client = createClient({
   space: "f36fwida7qqi",
   environment: "master",
-  accessToken: "jI7ltfRh7Qg2OCWJIVdNy-C4AGs1Gi2wc2FSJcTsyZA",
+  accessToken: import.meta.env.VITE_API_KEY,
 });
 const useFetchProjects = () => {
   const [loading, setLoading] = useState(true);
